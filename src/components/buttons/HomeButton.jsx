@@ -2,7 +2,9 @@ import React from 'react'
 
 const HomeButton = () => {
   return (
-    <div>HomeButton</div>
+    <div>
+      <button>Home</button>
+    </div>
   )
 }
 
