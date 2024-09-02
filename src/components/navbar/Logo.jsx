@@ -1,11 +1,10 @@
 import React from 'react'
-import "./logo.css"
+import "./logo.scss"
 
 const Logo = () => {
   return (
     <div className='logoHome'>
         <img className= 'logoAngeles'src="/assets/icons/Angeles-Foto.svg" alt="logo" />
-        <p>Hola mundo</p>
     </div>
   )
 }
