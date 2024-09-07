@@ -1,8 +1,11 @@
 import React from 'react'
+import AboutImage from '../components/main/AboutImage'
 
 const AboutMe = () => {
   return (
-    <div>AboutMe</div>
+    <div >
+     <AboutImage/>
+    </div>
   )
 }
 
