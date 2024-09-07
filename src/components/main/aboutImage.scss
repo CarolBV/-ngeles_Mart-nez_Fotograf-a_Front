@@ -1,0 +1,21 @@
+@import "../../../styles.scss";
+
+.aboutMeContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 15rem;
+  
+}
+
+.meImage {
+    width: 30rem;
+    height: auto;
+}
+.textAbout {
+    @include cormorant-garamond-medium(1.7rem);
+    text-align: right;
+    
+
+      
+    }
+

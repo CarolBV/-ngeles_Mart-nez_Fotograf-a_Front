@@ -1,6 +1,6 @@
 import React from 'react'
 
-const MainImage = () => {
+const HomeImage = () => {
   return (
     <div>
         <img src="" alt="" />
@@ -8,4 +8,4 @@ const MainImage = () => {
   )
 }
 
-export default MainImage
+export default HomeImage

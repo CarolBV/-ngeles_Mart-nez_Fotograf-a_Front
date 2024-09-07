@@ -4,7 +4,9 @@ import AboutMe from "../pages/AboutMe"
 import Contact from "../pages/Contact"
 import Home from "../pages/Home"
 import Layout from "../layout/Layout"
-
+import LoginPage from "../pages/LoginPage"
+import PrivateRoute from "./PrivateRoute"
+import AdminPage from "../pages/AdminPage"
 
 const router = createBrowserRouter ([
   {
@@ -26,7 +28,15 @@ const router = createBrowserRouter ([
       {
         path: "contact",
           element: <Contact/>
-        }
+        },
+        {
+          path: "login",
+          element: <LoginPage />,
+      },
+      {
+        path: "admin",
+        element: <PrivateRoute element={<AdminPage />} />
+      }
     ]
   }
 ]
