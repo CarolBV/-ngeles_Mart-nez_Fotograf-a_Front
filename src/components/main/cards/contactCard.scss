@@ -1,0 +1,119 @@
+@import "../../../../styles.scss";
+
+.contactContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra el contenido horizontalmente */
+  width: 100%;
+  padding: 2rem 1rem; /* Ajusta el padding para que haya espacio alrededor */
+ @include cormorant-garamond-medium(1.8rem)
+}
+.infoContactContainer {
+display: flex;
+flex-direction: column;
+width: 100%;
+align-items: center;
+
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center; /* Centra el título */
+  padding-bottom: 1.25rem;
+  color: $light-blue;
+}
+
+.infoContact {
+  text-align: left; /* Centra el texto de la información */
+  margin-bottom: 5rem; /* Añade espacio entre el texto y el formulario */
+  max-width: 90%; /* Limita el ancho del texto para una mejor legibilidad */
+  line-height: 3rem;
+  
+}
+
+.formContainer {
+  width: 40rem;
+  border-radius: 0.625rem;
+  padding: 1rem 1rem 1.25rem;
+  background-color: $light-grey2;
+  position: relative; /* Cambiado de 'absolute' a 'relative' para el posicionamiento correcto */
+  bottom: 0; /* Alinea al final del contenedor padre */
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  align-items: center;
+
+}.formTitle {
+  font-size: 2.438rem;
+  text-align: center; /* Centra el título */
+  padding-bottom: 1.25rem;
+  color: $light-blue;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.formRow {
+  display: flex;
+  gap: 1rem;
+}
+
+input, textarea {
+  background-color: $white;
+  border-radius: 0.313rem;
+  border-style: solid;
+  border-width: 0.063rem;
+  border-color: $light-blue;
+  padding-left: 0.625rem;
+}
+
+input {
+  width: 16rem;
+  height: 2.5rem;
+  margin-top: 0.625rem;
+  margin-bottom: 1.25rem;
+}
+
+textarea {
+  width: 30rem;
+  height: 5rem;
+  margin-top: 0.625rem;
+  padding-top: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.btnContactCard {
+  height: 2.813rem;
+  padding-left: 0.313rem;
+  padding-right: 0.313rem;
+  margin-bottom: 1.25rem;
+  margin-top: 0.625rem;
+  text-transform: uppercase;
+  background-color: $light-grey;
+  border-color: $light-blue;
+  border-style: solid;
+  border-radius: 0.625rem;
+  width: 26.25rem;
+  cursor: pointer;
+}
+
+button p {
+  color: $white;
+}
+
+span {
+  color: $light-blue;
+}
+
+.alert {
+  font-size: 0.813rem;
+  color: $black;
+}

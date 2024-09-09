@@ -1,15 +1,17 @@
-import { Route, Navigate } from 'react-router-dom'
+import { Navigate } from 'react-router-dom'
 import { useAuth } from '../context/auth/authContext';
 
-const PrivateRoute = ({ element, ...rest }) => {
-    const { token } = useAuth();  // Usamos el token para verificar autenticación
 
-    return (
-        <Route
-            {...rest}
-            element={token ? element : <Navigate to="/login" />}
-        />
-    );
+const PrivateRoute = ({ element }) => {
+    const { token } = useAuth();  // Verificamos si existe un token (autenticado)
+
+    // Si el usuario no está autenticado, redirigirlo a la página de login
+    if (!token) {
+        return <Navigate to="/login" />;
+    }
+
+    // Si el usuario está autenticado, renderiza el componente solicitado
+    return element;
 };
 
 export default PrivateRoute;

@@ -2,16 +2,28 @@
 
 
 .btnHome, .btnGallery, .btnAbout, .btnContact {
-@include cormorant-garamond-medium (2.5rem);
-border: none;
-background-color: white;
-
-}
-.aboutContainer, .galleryContainer, .contactContainer, .homeContainer {
-
+    @include cormorant-garamond-medium(2.5rem);
+    border: none;
+    color: $black; // Color inicial del texto
+    transition: color 0.3s ease, background-color 0.3s ease; // Transición suave para el color y fondo
+    cursor: pointer; // Cambia el cursor a puntero al pasar sobre el botón
+    background-color: #E1E6E8;
+  }
+  
+  // Estilo para el contenedor de los botones
+  .aboutContainer, .galleryContainer, .buttonContainer, .homeContainer {
     width: 11rem;
     height: 5rem;
     text-align: center;
-display: flex;
-align-items: center;
-}
+    display: flex;
+    align-items: center;
+    justify-content: center; // Centra el contenido horizontalmente
+    
+   
+  }
+  
+  // Efecto de hover para los botones
+  .btnHome:hover, .btnGallery:hover, .btnAbout:hover, .btnContact:hover {
+    color: rgb(238, 243, 241); // Color del texto al pasar el ratón
+    transform: scale(1.05); // Escalar el botón ligeramente
+  }

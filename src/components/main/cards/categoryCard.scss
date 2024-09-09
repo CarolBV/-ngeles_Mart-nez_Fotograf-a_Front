@@ -1,0 +1,38 @@
+@import "../../../../styles.scss";
+
+.cardContainer {
+  display: flex;
+  text-align: center;
+  width: 400px;
+  height: auto;
+  border: solid 0.3rem rgb(23, 185, 185);
+  border-radius: 1rem;
+  margin: 3%;
+  padding: 3%;
+@include cormorant-garamond-medium(2rem);
+flex-direction: column;
+background-color: rgb(118, 173, 155);
+.card {
+display: flex;
+justify-content: center;
+
+}
+.card img {
+    width: 23rem;
+    height: auto;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease; // Transición suave para el efecto de zoom
+    width: 100%; // Ajusta al tamaño del contenedor
+
+    &:hover {
+      transform: scale(1.1); // Escalar la imagen al pasar el ratón
+    }
+}
+h4 {
+    
+    color: white;
+    transition: color 0.3s ease;
+}
+
+
+}

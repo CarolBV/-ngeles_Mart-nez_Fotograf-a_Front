@@ -1,8 +1,9 @@
 import React from 'react'
+import InputFile from '../components/labels/InputFile'
 
 const AdminPage = () => {
   return (
-    <div>AdminPage</div>
+    <div> <InputFile/></div>
   )
 }
 

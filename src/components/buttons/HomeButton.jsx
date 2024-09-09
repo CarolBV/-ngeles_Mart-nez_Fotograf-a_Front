@@ -6,7 +6,7 @@ const HomeButton = () => {
   return (
     <div className='homeContainer'>
       <Link to="/">
-      <button className='btnHome'>Home</button>
+      <button className='btnHome'>Inicio</button>
       </Link>
     </div>
   )

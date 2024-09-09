@@ -5,7 +5,7 @@ const GalleryButton = () => {
   return (
     <div className='galleryContainer'>
         <Link to="/gallery">
-        <button className='btnGallery'>Gallery</button>
+        <button className='btnGallery'>Galeria</button>
         </Link>
     </div>
   )
