@@ -7,6 +7,7 @@ import Layout from "../layout/Layout"
 import LoginPage from "../pages/LoginPage"
 import PrivateRoute from "./PrivateRoute"
 import AdminPage from "../pages/AdminPage"
+import ImageGallery from "../components/ImageGallery"
 
 const router = createBrowserRouter ([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter ([
         path: "gallery",
         element: <Gallery/>
       },
+      {
+        path: "outside",
+        element: <ImageGallery />,
+    },
       {
       path: "aboutme",
         element: <AboutMe/>

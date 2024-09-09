@@ -6,7 +6,7 @@ const AboutMeButton = () => {
   return (
     <div className='aboutContainer'>
         <Link to= "/aboutme">
-        <button className='btnAbout'>About Me</button>
+        <button className='btnAbout'>Sobre Mí</button>
         </Link>
     </div>
   )

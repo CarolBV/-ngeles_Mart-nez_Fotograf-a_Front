@@ -1,5 +1,18 @@
 /* Color Variables */
 
+$light-blue: #76ad9b;
+$grey: #a1b0b6;
+$white: #F9F9F9;
+$black: #0e0e0e;
+$light-grey: #a1b0b6;
+$light-grey2: #a1b0b652;
+$dark-grey: #4A4A4A;
+$mint: #C7E9B0;
+$neutral: #F5E6CC;
+$pink-soft:#FFC1C1;
+$earth: #D48461;
+
+
 
 
 @mixin cormorant-garamond-regular ($font-size) {
@@ -7,7 +20,7 @@
     font-weight: 400;
     font-style: normal;
     font-size: $font-size;
-    color: $color;
+    
   }
   
  @mixin cormorant-garamond-medium ($font-size) {
@@ -21,6 +34,13 @@
  @mixin cormorant-garamond-bold ($font-size) {
     font-family: "Cormorant Garamond", serif;
     font-weight: 700;
+    font-style: normal;
+    font-size: $font-size;
+  }
+  @mixin lora($font-size) {
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
     font-style: normal;
     font-size: $font-size;
   }

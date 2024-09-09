@@ -1,21 +1,80 @@
 @import "../../../styles.scss";
 
+
 .aboutMeContainer {
     display: flex;
+    flex-direction: column; /* Mantiene el contenedor en columna */
+    align-items: center; /* Centra todo el contenido horizontalmente */
+    width: 100%;
+    height: auto;
+    padding: 2rem; /* Añade espacio alrededor del contenido */
+    @include cormorant-garamond-regular(1.5rem)
+}
+
+.titleAbout {
+    text-align: center;
+    width: 100%; /* Asegura que el título ocupe el ancho completo del contenedor */
+    max-width: 60rem; /* Limita el ancho del título */
+    margin-bottom: 4rem;
+    margin-top: 1rem;
+    @include cormorant-garamond-bold (3rem);
+    color: $light-blue; /* Espacio debajo del título */
+   
+}
+
+.aboutMeInfo {
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Alinea el contenido verticalmente */
+    width: 100%;
+    gap: 2rem; /* Espacio entre el texto y la imagen */
+    background-color: $light-grey2;
+    border-radius: 1rem;
+    margin-bottom: 3rem;
+}
+.myGold {
+    text-align: center;
+    width: 100%; /* Asegura que el título ocupe el ancho completo del contenedor */
+    /* Limita el ancho del título */
+    margin-bottom: 2rem;
+    @include cormorant-garamond-bold (3rem);
+    color: $white; /* Espacio debajo del título */
+    background-color: $light-blue;
+    border-radius: 0.2rem;
+
+}
+.aboutMeImageContainer {
+    display: flex;
     justify-content: center;
-    margin-top: 15rem;
-  
+    width: 40%;
 }
 
 .meImage {
     width: 30rem;
     height: auto;
+    border-radius: 1rem;
+    border: 0.5rem solid $light-blue;
 }
-.textAbout {
-    @include cormorant-garamond-medium(1.7rem);
-    text-align: right;
-    
 
-      
-    }
+.textAbout{
+    font-size: 1.7rem;
+    text-align: left;
+    border-radius: 1rem;
+    margin: 2%;
+    padding: 2%;
+    width: 50%;
+    color: black;
+    line-height: 2.8rem;
+}
 
+.textAbout2 {
+    width: 70%; /* Ocupa el 70% del ancho del contenedor */
+    margin: 0 auto; /* Centra el contenedor dentro del contenedor padre */
+    line-height: 2.4; /* Establece la altura de línea a 2.8 */
+    text-align: center; /* Centra el texto dentro del contenedor */
+    @include lora(1.5rem);
+}
+
+.textAbout2 p {
+    margin-bottom: 1rem; /* Espacio debajo de cada párrafo, ajusta según sea necesario */
+}

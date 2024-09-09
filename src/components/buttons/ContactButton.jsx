@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom'
 
 const ContactButton = () => {
   return (
-    <div className='contactContainer'>
+    <div className='buttonContainer'>
         <Link to="/contact">
-        <button className='btnContact'>Contact</button>
+        <button className='btnContact'>Contacto</button>
         </Link>
     </div>
   )
