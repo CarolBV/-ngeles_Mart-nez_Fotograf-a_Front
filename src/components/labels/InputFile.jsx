@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/auth/authContext'; // Contexto de autenticación
+import './inputFile.scss';
 
 const InputFile = () => {
     const { token } = useAuth(); // Obtenemos el token del contexto
@@ -49,9 +50,19 @@ const InputFile = () => {
     return (
         <div className='formAddImageContainer'> 
         <form onSubmit={handleSubmit}>
-            <input type="file" onChange={handleImageChange} />
+            <input className='inputFile' type="file" onChange={handleImageChange} />
             <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="Nombre" />
-<input type="text" value={category} onChange={(e) => setCategory(e.target.value)} placeholder="Categoría" />
+            <select value={category} onChange={(e) => setCategory(e.target.value)} required>
+                    <option value="">Selecciona una categoría</option>
+                    <option value="Exterior">Exteriores</option>
+                    <option value="Navidad">Navidad</option>
+                    <option value="Halloween">Halloween</option>
+                    <option value="Parejas">Parejas</option>
+                    <option value="Bodas">Bodas</option>
+                    <option value="Newborn">Bebés</option>
+                    <option value="Estudio">Estudio</option>
+                    {/* Añadir más categorías según lo necesites */}
+                </select>
             <button type="submit">Subir Imagen</button>
         </form>
         </div>

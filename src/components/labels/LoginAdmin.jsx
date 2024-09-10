@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useState } from 'react';
 import { useAuth } from '../../context/auth/authContext';
 import { useNavigate } from 'react-router-dom';
+import './loginAdmin.scss';
 
 
 const LoginAdmin = () => {
@@ -34,12 +35,12 @@ const LoginAdmin = () => {
     };
 
   return (
-    <div className="login-container">
-    <h2>Iniciar sesión</h2>
+    <div className="loginContainer">
+    <h2 className='titleLogin'>Iniciar sesión</h2>
     <form onSubmit={handleSubmit}>
-        <div>
-            <label>Usuario:</label>
-            <input
+        <div className='labLogin'>
+            <label className='labUser'>Usuario:</label>
+            <input className='logInput'
                 type="text"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
@@ -47,17 +48,20 @@ const LoginAdmin = () => {
             />
         </div>
         <div>
-            <label>Contraseña:</label>
-            <input
+            <label className='labPass'>Contraseña:</label>
+            <input className='logInput2'
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
             />
+           
         </div>
-        <button type="submit">Iniciar sesión</button>
+        <button className='btnLog' type="submit">Iniciar sesión</button>
+     
         {error && <p>{error}</p>}
     </form>
+
 </div>
 );
 };

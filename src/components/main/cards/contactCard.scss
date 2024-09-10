@@ -6,7 +6,9 @@
   align-items: center; /* Centra el contenido horizontalmente */
   width: 100%;
   padding: 2rem 1rem; /* Ajusta el padding para que haya espacio alrededor */
- @include cormorant-garamond-medium(1.8rem)
+ @include cormorant-garamond-medium(1.8rem);
+ background-color: $soft-white;
+ 
 }
 .infoContactContainer {
 display: flex;
@@ -20,22 +22,23 @@ align-items: center;
   font-size: 3rem;
   text-align: center; /* Centra el título */
   padding-bottom: 1.25rem;
-  color: $light-blue;
+  color: $dark-earth;
 }
 
 .infoContact {
-  text-align: left; /* Centra el texto de la información */
+  text-align: center; /* Centra el texto de la información */
   margin-bottom: 5rem; /* Añade espacio entre el texto y el formulario */
   max-width: 90%; /* Limita el ancho del texto para una mejor legibilidad */
   line-height: 3rem;
-  
+  color: $dark-grey;
+  @include lora(1.5rem)
 }
 
 .formContainer {
   width: 40rem;
-  border-radius: 0.625rem;
+  border-radius: 1rem;
   padding: 1rem 1rem 1.25rem;
-  background-color: $light-grey2;
+  background-color: $soft;
   position: relative; /* Cambiado de 'absolute' a 'relative' para el posicionamiento correcto */
   bottom: 0; /* Alinea al final del contenedor padre */
   display: flex;
@@ -43,11 +46,13 @@ align-items: center;
   gap: 1.25rem;
   align-items: center;
 
+
 }.formTitle {
   font-size: 2.438rem;
   text-align: center; /* Centra el título */
   padding-bottom: 1.25rem;
-  color: $light-blue;
+  color: $dark-earth;
+  
 }
 
 .form {
@@ -58,6 +63,7 @@ align-items: center;
 
 .formRow {
   display: flex;
+  flex-direction: column;
   gap: 1rem;
 }
 
@@ -66,8 +72,9 @@ input, textarea {
   border-radius: 0.313rem;
   border-style: solid;
   border-width: 0.063rem;
-  border-color: $light-blue;
+  border-color: $dark-earth;
   padding-left: 0.625rem;
+  font-size: 1rem;
 }
 
 input {
@@ -97,8 +104,8 @@ label {
   margin-bottom: 1.25rem;
   margin-top: 0.625rem;
   text-transform: uppercase;
-  background-color: $light-grey;
-  border-color: $light-blue;
+  background-color: $earth;
+  border-color: $dark-earth;
   border-style: solid;
   border-radius: 0.625rem;
   width: 26.25rem;
@@ -107,13 +114,15 @@ label {
 
 button p {
   color: $white;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
-span {
-  color: $light-blue;
+.required {
+  color: $dark-earth;
 }
 
 .alert {
   font-size: 0.813rem;
-  color: $black;
+  color: $dark-grey;
 }

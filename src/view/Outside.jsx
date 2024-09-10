@@ -1,11 +1,11 @@
 import React from 'react'
-import ImageGallery from '../components/ImageGallery'
+import ImageGalleryByCategory from '../components/ImageGalleryByCategory'
 
 
 const Outside = () => {
   return (
     <div>
-         <ImageGallery/>
+         <ImageGalleryByCategory/>
     </div>
   )
 }
