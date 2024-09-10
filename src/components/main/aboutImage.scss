@@ -8,7 +8,8 @@
     width: 100%;
     height: auto;
     padding: 2rem; /* Añade espacio alrededor del contenido */
-    @include cormorant-garamond-regular(1.5rem)
+    @include cormorant-garamond-medium(1.5rem);
+    background-color: $soft-white;
 }
 
 .titleAbout {
@@ -18,7 +19,8 @@
     margin-bottom: 4rem;
     margin-top: 1rem;
     @include cormorant-garamond-bold (3rem);
-    color: $light-blue; /* Espacio debajo del título */
+    color: $dark-earth; /* Espacio debajo del título */
+   
    
 }
 
@@ -28,9 +30,11 @@
     align-items: center; /* Alinea el contenido verticalmente */
     width: 100%;
     gap: 2rem; /* Espacio entre el texto y la imagen */
-    background-color: $light-grey2;
+    background-color: $soft;
     border-radius: 1rem;
     margin-bottom: 3rem;
+   
+   
 }
 .myGold {
     text-align: center;
@@ -39,8 +43,8 @@
     margin-bottom: 2rem;
     @include cormorant-garamond-bold (3rem);
     color: $white; /* Espacio debajo del título */
-    background-color: $light-blue;
-    border-radius: 0.2rem;
+    background-color: $dark-earth;
+    border-radius: 0.5rem;
 
 }
 .aboutMeImageContainer {
@@ -53,7 +57,7 @@
     width: 30rem;
     height: auto;
     border-radius: 1rem;
-    border: 0.5rem solid $light-blue;
+    border: 0.5rem solid $dark-earth2;
 }
 
 .textAbout{
@@ -68,11 +72,14 @@
 }
 
 .textAbout2 {
-    width: 70%; /* Ocupa el 70% del ancho del contenedor */
+    width: 90%; /* Ocupa el 70% del ancho del contenedor */
     margin: 0 auto; /* Centra el contenedor dentro del contenedor padre */
-    line-height: 2.4; /* Establece la altura de línea a 2.8 */
-    text-align: center; /* Centra el texto dentro del contenedor */
-    @include lora(1.5rem);
+    line-height: 2.4; 
+    text-align: center; 
+    @include cormorant-garamond-medium(1.7rem);
+   
+    
+    
 }
 
 .textAbout2 p {

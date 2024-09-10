@@ -2,12 +2,14 @@
 
 
 .btnHome, .btnGallery, .btnAbout, .btnContact {
-    @include cormorant-garamond-medium(2.5rem);
+    @include cormorant-garamond-bold(2.5rem);
     border: none;
-    color: $black; // Color inicial del texto
+    color: $dark-earth3; // Color inicial del texto
     transition: color 0.3s ease, background-color 0.3s ease; // Transición suave para el color y fondo
     cursor: pointer; // Cambia el cursor a puntero al pasar sobre el botón
-    background-color: #E1E6E8;
+    background-color: $dark-earth2;
+    background: none;
+
   }
   
   // Estilo para el contenedor de los botones

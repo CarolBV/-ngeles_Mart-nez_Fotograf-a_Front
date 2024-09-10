@@ -22,7 +22,8 @@ const ContactCard = () => {
               Nombre
               <span className="required">*</span>
             </label>
-            <input
+            <input 
+            className='inpName'
               type="text"
               name="name"
               id="name"
@@ -36,6 +37,7 @@ const ContactCard = () => {
               <span className="required">*</span>
             </label>
             <input
+            className='inpEmail'
               type="email"
               name="email"
               id="email"

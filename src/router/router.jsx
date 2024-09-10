@@ -7,7 +7,7 @@ import Layout from "../layout/Layout"
 import LoginPage from "../pages/LoginPage"
 import PrivateRoute from "./PrivateRoute"
 import AdminPage from "../pages/AdminPage"
-import ImageGallery from "../components/ImageGallery"
+import ImageGalleryByCategory from "../components/ImageGalleryByCategory"
 
 const router = createBrowserRouter ([
   {
@@ -23,9 +23,9 @@ const router = createBrowserRouter ([
         element: <Gallery/>
       },
       {
-        path: "outside",
-        element: <ImageGallery />,
-    },
+        path: "gallery/category/:category", // Ruta dinámica para cada categoría
+        element: <ImageGalleryByCategory />,
+      },
       {
       path: "aboutme",
         element: <AboutMe/>

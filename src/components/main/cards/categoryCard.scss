@@ -1,38 +1,39 @@
 @import "../../../../styles.scss";
 
-.cardContainer {
+.categoryCard {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  width: 400px;
-  height: auto;
-  border: solid 0.3rem rgb(23, 185, 185);
+  width: 20rem;
+  margin: 2rem;
+  padding: 1rem;
+  border: 0.3rem solid $dark-earth;
   border-radius: 1rem;
-  margin: 3%;
-  padding: 3%;
-@include cormorant-garamond-medium(2rem);
-flex-direction: column;
-background-color: rgb(118, 173, 155);
-.card {
-display: flex;
-justify-content: center;
+  background-color: $soft;
+  transition: transform 0.3s ease;
 
-}
-.card img {
-    width: 23rem;
+
+  
+  .categoryCardImage {
+    width: 90%;
     height: auto;
     border-radius: 0.5rem;
-    transition: transform 0.3s ease; // Transición suave para el efecto de zoom
-    width: 100%; // Ajusta al tamaño del contenedor
+    transition: transform 0.3s ease;
 
     &:hover {
-      transform: scale(1.1); // Escalar la imagen al pasar el ratón
+      transform: scale(1.1); // Efecto de zoom al pasar el ratón
     }
-}
-h4 {
-    
-    color: white;
+  }
+
+  .categoryCardLink {
+    text-decoration: none;
+  }
+
+  .categoryCardTitle {
+    margin-top: 1rem;
+    color: $dark-earth3;
+    font-size: 2rem;
     transition: color 0.3s ease;
-}
-
-
+  }
 }
