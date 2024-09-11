@@ -15,25 +15,29 @@ const LoginAdmin = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
+      
         try {
-            const response = await axios.post('http://localhost:3001/admin/login', {
-                username,
-                password
-            });
-
-            const token = response.data.token; // Capturamos el token que devuelve el backend
-            const adminId = response.data.adminId; // Capturamos el adminId si es devuelto
-
-            setToken(token); // Guardamos el token en el AuthContext
-            setAdminId(adminId); // Guardamos el adminId en el AuthContext
-            
-            navigate('/admin'); // Redirigimos a la página de galería
+          const response = await axios.post('http://localhost:3001/admin/login', {
+            username,
+            password
+          });
+      
+          const token = response.data.token; // Capturamos el token que devuelve el backend
+          const adminId = response.data.adminId; // Capturamos el adminId si es devuelto
+          console.log("Token recibido:", token);
+      
+          setToken(token); // Guardamos el token en el AuthContext
+          setAdminId(adminId); // Guardamos el adminId en el AuthContext
+      
+          // Almacenamos manualmente en localStorage como verificación adicional
+          localStorage.setItem('token', token);
+          localStorage.setItem('loggedInAdminId', adminId);
+      
+          navigate('/admin'); // Redirigimos a la página de galería
         } catch (err) {
-            setError('Credenciales incorrectas. Por favor, inténtelo de nuevo.');
+          setError('Credenciales incorrectas. Por favor, inténtelo de nuevo.');
         }
-    };
-
+      };
   return (
     <div className="loginContainer">
     <h2 className='titleLogin'>Iniciar sesión</h2>

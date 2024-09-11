@@ -30,7 +30,7 @@ const Banner = () => {
       if (images.length > 0) { // Solo ejecuta el intervalo si hay imágenes cargadas
         const interval = setInterval(() => {
           setCurrentSlide((prevSlide) => (prevSlide + 1) % images.length); // Cambia al siguiente slide
-        }, 3000); // Cambia la imagen cada 3 segundos
+        }, 10000); // Cambia la imagen cada 3 segundos
 
         return () => clearInterval(interval); // Limpia el intervalo al desmontar
       }

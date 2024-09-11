@@ -13,16 +13,15 @@
   background-color: $soft;
   transition: transform 0.3s ease;
 
-
-  
   .categoryCardImage {
-    width: 90%;
-    height: auto;
+    width: 100%;                 // La imagen ocupa todo el ancho del contenedor
+    height: 15rem;               // Altura fija para todas las imágenes
+    object-fit: cover;           // Asegura que la imagen se ajuste al contenedor sin distorsión
     border-radius: 0.5rem;
     transition: transform 0.3s ease;
 
     &:hover {
-      transform: scale(1.1); // Efecto de zoom al pasar el ratón
+      transform: scale(1.1);     // Efecto de zoom al pasar el ratón
     }
   }
 

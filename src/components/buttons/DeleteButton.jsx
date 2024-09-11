@@ -1,7 +1,8 @@
 import axios from "axios";
 import DeleteModal from "../modals/DeleteModal";
 import { useState } from "react";
-import './buttons.scss';
+import './deleteButton.scss';
+
 
 const DeleteButton = ({ imageId, onImageDeleted }) => {
   const [showModal, setShowModal] = useState(false);
@@ -9,7 +10,8 @@ const DeleteButton = ({ imageId, onImageDeleted }) => {
   const handleDelete = async () => {
     try {
       const token = localStorage.getItem('token');
-      await axios.delete(`http://localhost:3001/gallery/image/${imageId}`, {
+      console.log('Token:', token);
+      await axios.delete(`http://localhost:3001/gallery/id/${imageId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       onImageDeleted(imageId); // Actualiza la lista de imágenes
@@ -22,8 +24,8 @@ const DeleteButton = ({ imageId, onImageDeleted }) => {
   return (
     <>
       {/* Icono para eliminar */}
-      <div onClick={() => setShowModal(true)}>
-        <img src="/assets/icons/delete.svg" alt="Eliminar imagen" />
+      <div className="deleteButton" onClick={(e) => { e.stopPropagation(); setShowModal(true); }}>
+        <img className="imgDeleteButton" src="/assets/icons/delete.svg" alt="Eliminar imagen" />
       </div>
 
       {/* Modal de confirmación */}
@@ -38,4 +40,4 @@ const DeleteButton = ({ imageId, onImageDeleted }) => {
   );
 };
 
-export default DeleteButton;
+export default DeleteButton
