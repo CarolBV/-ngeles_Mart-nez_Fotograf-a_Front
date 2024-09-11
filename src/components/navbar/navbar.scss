@@ -3,8 +3,8 @@
     display: flex;
     gap: 5rem;
     margin-left: 12rem;
-    align-items: center;  // Asegura que todos los elementos estén centrados verticalmente
-  }
+    align-items: center;  
+}
   
   .navContainer {
     display: flex;
@@ -20,13 +20,12 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    max-width: 1440px;  /* Ancho máximo */
-    margin: auto;       /* Centrar el navbar */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Sombra opcional */
+    max-width: 1440px;  
+    margin: auto;       
   }
   
   .navbar {
     display: flex;
     align-items: center;
-    gap: 3rem;  /* Ajusta el espacio entre botones */
+    gap: 3rem;  
   }

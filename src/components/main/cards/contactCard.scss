@@ -3,9 +3,9 @@
 .contactContainer {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centra el contenido horizontalmente */
+  align-items: center; 
   width: 100%;
-  padding: 2rem 1rem; /* Ajusta el padding para que haya espacio alrededor */
+  padding: 2rem 1rem; 
  @include cormorant-garamond-medium(1.8rem);
  background-color: $soft-white;
  
@@ -15,20 +15,21 @@ display: flex;
 flex-direction: column;
 width: 100%;
 align-items: center;
-
+margin-top: 3rem;
 }
 
 .title {
   font-size: 3rem;
-  text-align: center; /* Centra el título */
+  text-align: center;
   padding-bottom: 1.25rem;
+  margin-bottom: 2rem;
   color: $dark-earth;
 }
 
 .infoContact {
-  text-align: center; /* Centra el texto de la información */
-  margin-bottom: 5rem; /* Añade espacio entre el texto y el formulario */
-  max-width: 90%; /* Limita el ancho del texto para una mejor legibilidad */
+  text-align: center; 
+  margin-bottom: 2rem; 
+  max-width: 90%; 
   line-height: 3rem;
   color: $dark-grey;
   @include lora(1.5rem)
@@ -39,17 +40,19 @@ align-items: center;
   border-radius: 1rem;
   padding: 1rem 1rem 1.25rem;
   background-color: $soft;
-  position: relative; /* Cambiado de 'absolute' a 'relative' para el posicionamiento correcto */
-  bottom: 0; /* Alinea al final del contenedor padre */
+  position: relative; 
+  bottom: 0; 
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
   align-items: center;
+  flex: 1 1 60%;
+  order: 1;
+}
 
-
-}.formTitle {
+.formTitle {
   font-size: 2.438rem;
-  text-align: center; /* Centra el título */
+  text-align: center; 
   padding-bottom: 1.25rem;
   color: $dark-earth;
   
@@ -75,10 +78,11 @@ align-items: center;
   border-color: $dark-earth;
   padding-left: 0.625rem;
   font-size: 1rem;
-  width: 16rem;
+  width: 100%;
   height: 2.5rem;
   margin-top: 0.625rem;
   margin-bottom: 1.25rem;
+  padding: 1.5rem 1rem;
 }
 
 .inpEmail, .inpName, .messageRequired {
@@ -91,7 +95,7 @@ align-items: center;
   width: 30rem;
   height: 5rem;
   margin-top: 0.625rem;
-  padding-top: 1rem;
+  padding: 1rem;
   margin-bottom: 1.25rem;
   border-color: $dark-earth;
   font-size: 1rem;
@@ -128,3 +132,48 @@ button p {
   font-size: 1.5rem;
   color: $dark-grey;
 }
+.litleHealpersContainer {
+  display: flex;
+  flex: 1 1 30%;
+  order: 2;
+}
+.litleHealpers {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+.socialMediaContainer {
+  display: flex;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  
+}
+.socialMediaImage, .socialMediaImage2 {
+  width: 5rem;
+  height: 2rem;
+   
+  }
+   .socialFormMediaContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 64rem;
+    background-color: $soft;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin: 4rem auto 5rem;
+   }
+   .socialFormMediaContainerTitle {
+    order: 0;
+    flex: 1 0 100%;
+}
+   .socialMediaInfo {
+    background-color: $dark-earth;
+    color: $white;
+    font-size: 2rem;
+    border-radius: 1rem;
+    padding: 0.5rem 1.5rem;
+    margin: 3rem auto;
+   }

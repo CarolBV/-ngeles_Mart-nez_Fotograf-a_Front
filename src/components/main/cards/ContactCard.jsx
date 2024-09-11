@@ -7,14 +7,25 @@ const ContactCard = () => {
       <div className="infoContactContainer">
   <h2 className="title">CONTACTO</h2>
   <p className="infoContact">
-    Si te apetece que hablemos, puedes escribirme por el formulario de contacto, directamente al correo <strong>angelesmartinezfotografia@gmail.com</strong> o por redes sociales. <br />
-    ¿Tienes pensado hacer una sesión de fotos de familia o regalar un reportaje para alguien especial?, ¿te han quedado dudas?, Ponte en contacto conmigo y resolveré todas tus preguntas. <br />
+    Si te apetece que hablemos, puedes escribirme por el formulario de contacto, directamente al correo <strong>angelesmartinezfotografia@gmail.com</strong> o por redes sociales.
+    ¿Tienes pensado hacer una sesión de fotos de familia o regalar un reportaje para alguien especial?, ¿te han quedado dudas?, Ponte en contacto conmigo y resolveré todas tus preguntas.
     Cuéntame tu idea, igual podemos organizar una sesión de Navidad junto a otras familias que conozcas y hacer un plan divertido, además de tener un descuento especial al ser varios.
   </p>
+  <p className="socialMediaInfo">Contáctame a través de mis redes sociales y juntos crearemos recuerdos mágicos...</p>
+  </div>
+  <div className="socialMediaContainer">
+    <img className="socialMediaImage" src="/assets/icons/instagram.svg" alt="Instagram Logo" />
+    <img className="socialMediaImage2" src="/assets/icons/tiktok.svg" alt="Tiktok Logo" />
+  </div>
+  <div className="socialFormMediaContainer">
+  <div className="socialFormMediaContainerTitle">
+    <h2 className="formTitle">Formulario de contacto</h2>
+  </div>
+  <div className="litleHealpersContainer">
+    <img className="litleHealpers" src="/assets/icons/Contact.jpg" alt="Contact Image" />
   </div>
   <div className="formContainer">
     <div className="form1">
-      <h2 className="formTitle">Formulario de contacto</h2>
       <form action="submeterForm" method="post">
         <div className="formRow">
           <p>
@@ -66,6 +77,7 @@ const ContactCard = () => {
           <span className="required"> * </span>los campos son obligatorios
         </p>
       </form>
+      </div>
     </div>
   </div>
 </div>

@@ -3,33 +3,31 @@
 
 .aboutMeContainer {
     display: flex;
-    flex-direction: column; /* Mantiene el contenedor en columna */
-    align-items: center; /* Centra todo el contenido horizontalmente */
+    flex-direction: column; 
+    align-items: center; 
     width: 100%;
     height: auto;
-    padding: 2rem; /* Añade espacio alrededor del contenido */
+    padding: 2rem; 
     @include cormorant-garamond-medium(1.5rem);
     background-color: $soft-white;
 }
 
 .titleAbout {
     text-align: center;
-    width: 100%; /* Asegura que el título ocupe el ancho completo del contenedor */
-    max-width: 60rem; /* Limita el ancho del título */
+    width: 100%; 
+    max-width: 60rem; 
     margin-bottom: 4rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
     @include cormorant-garamond-bold (3rem);
-    color: $dark-earth; /* Espacio debajo del título */
-   
-   
+    color: $dark-earth; 
 }
 
 .aboutMeInfo {
     display: flex;
-    justify-content: center; /* Centra el contenido horizontalmente */
-    align-items: center; /* Alinea el contenido verticalmente */
+    justify-content: center; 
+    align-items: center; 
     width: 100%;
-    gap: 2rem; /* Espacio entre el texto y la imagen */
+    gap: 2rem; 
     background-color: $soft;
     border-radius: 1rem;
     margin-bottom: 3rem;
@@ -38,14 +36,15 @@
 }
 .myGold {
     text-align: center;
-    width: 100%; /* Asegura que el título ocupe el ancho completo del contenedor */
-    /* Limita el ancho del título */
+    width: 100%; 
     margin-bottom: 2rem;
-    @include cormorant-garamond-bold (3rem);
-    color: $white; /* Espacio debajo del título */
+    @include cormorant-garamond-bold (2.5rem);
+    color: $white; 
     background-color: $dark-earth;
     border-radius: 0.5rem;
-
+    margin: 3rem auto 5rem;
+    max-width: 64rem;
+    padding: 1.5rem;
 }
 .aboutMeImageContainer {
     display: flex;
@@ -61,27 +60,25 @@
 }
 
 .textAbout{
-    font-size: 1.7rem;
+    font-size: 1.75rem;
     text-align: left;
     border-radius: 1rem;
     margin: 2%;
     padding: 2%;
     width: 50%;
     color: black;
-    line-height: 2.8rem;
+    line-height: 2.75rem;
 }
 
 .textAbout2 {
-    width: 90%; /* Ocupa el 70% del ancho del contenedor */
-    margin: 0 auto; /* Centra el contenedor dentro del contenedor padre */
+    width: 90%; 
+    margin: 0 auto; 
     line-height: 2.4; 
     text-align: center; 
     @include cormorant-garamond-medium(1.7rem);
-   
-    
-    
 }
 
 .textAbout2 p {
-    margin-bottom: 1rem; /* Espacio debajo de cada párrafo, ajusta según sea necesario */
+    line-height: 3rem;
+    margin-bottom: 2rem; 
 }
