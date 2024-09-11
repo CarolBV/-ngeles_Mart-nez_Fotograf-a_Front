@@ -14,11 +14,13 @@ const ImageGalleryByCategory = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [imageToEdit, setImageToEdit] = useState(null); // Imagen seleccionada para editar
+  const [imageToView, setImageToView] = useState(null); // Imagen seleccionada para ver en tamaño completo
 
   useEffect(() => {
     const fetchImagesByCategory = async () => {
       try {
         const response = await axios.get(`http://localhost:3001/gallery/category/${category}`);
+        console.log('Imágenes de la categoría:', response.data);
         setImages(response.data);
         setLoading(false);
       } catch (error) {
@@ -30,12 +32,12 @@ const ImageGalleryByCategory = () => {
     fetchImagesByCategory();
   }, [category]);
 
-  const handleEditClick = (image) => {
-    setImageToEdit(image); // Mostrar el modal para editar la imagen
-  };
-
   const handleImageDeleted = (imageId) => {
     setImages(images.filter((image) => image.id !== imageId)); // Actualizar la lista de imágenes tras eliminar una
+  };
+
+  const handleImageClick = (image) => {
+    setImageToView(image); // Mostrar la imagen en tamaño completo
   };
 
   if (loading) return <p>Cargando imágenes...</p>;
@@ -44,17 +46,25 @@ const ImageGalleryByCategory = () => {
   return (
     <div className="imageGallery">
       {images.map((image) => (
-        <div key={image.id} className="imagecard">
-          <img className='imgGallery' src={image.imageUrl} alt={image.name} />
-          <p>{image.name}</p>
+        <div key={image.id} className="imageCard" onClick={() => handleImageClick(image)}>
           {isAuthenticated && (
-            <>
-              <button onClick={() => handleEditClick(image)}>Editar</button>
-              <DeleteButton imageId={image.id} onImageDeleted={handleImageDeleted} />
-            </>
+            <DeleteButton
+              imageId={image.id}
+              onImageDeleted={handleImageDeleted}
+            />
           )}
+          <img className="imgGallery" src={image.imageUrl} alt={image.name} />
+          <p className="imageTitle">{image.name}</p>
         </div>
       ))}
+
+      {/* Modal para ver la imagen en tamaño completo */}
+      {imageToView && (
+        <div className="imageModal" onClick={() => setImageToView(null)}>
+          <img className="fullImage" src={imageToView.imageUrl} alt={imageToView.name} />
+        </div>
+      )}
+
       {imageToEdit && (
         <EditModal
           image={imageToEdit}

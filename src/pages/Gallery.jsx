@@ -13,8 +13,7 @@ const Gallery = () => {
     const fetchCategoryImages = async () => {
       try {
         const response = await axios.get('http://localhost:3001/gallery/categories');
-        console.log('Response data:', response.data); // Verifica que recibes un array de objetos con imageUrl y category
-        setCategories(response.data);
+         setCategories(response.data);
         setLoading(false);
       } catch (error) {
         setError('Error al cargar las categorías');
