@@ -4,6 +4,7 @@ import EditModal from './modals/EditModal';
 import { useAuth } from '../context/auth/authContext';
 import DeleteButton from './buttons/DeleteButton';
 import { useParams } from 'react-router-dom';
+import './imageGalleryByCategory.scss';
 
 
 const ImageGalleryByCategory = () => {
@@ -41,10 +42,10 @@ const ImageGalleryByCategory = () => {
   if (error) return <p>{error}</p>;
 
   return (
-    <div className="image-gallery">
+    <div className="imageGallery">
       {images.map((image) => (
-        <div key={image.id} className="image-card">
-          <img src={image.imageUrl} alt={image.name} />
+        <div key={image.id} className="imagecard">
+          <img className='imgGallery' src={image.imageUrl} alt={image.name} />
           <p>{image.name}</p>
           {isAuthenticated && (
             <>

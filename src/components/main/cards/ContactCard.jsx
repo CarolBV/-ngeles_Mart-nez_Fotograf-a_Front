@@ -13,7 +13,7 @@ const ContactCard = () => {
   </p>
   </div>
   <div className="formContainer">
-    <div className="form">
+    <div className="form1">
       <h2 className="formTitle">Formulario de contacto</h2>
       <form action="submeterForm" method="post">
         <div className="formRow">
