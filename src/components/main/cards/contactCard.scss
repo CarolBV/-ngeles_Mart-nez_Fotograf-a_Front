@@ -55,7 +55,7 @@ align-items: center;
   
 }
 
-.form {
+.form1 {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
@@ -67,7 +67,7 @@ align-items: center;
   gap: 1rem;
 }
 
-input, textarea {
+.inpEmail, .inpName {
   background-color: $white;
   border-radius: 0.313rem;
   border-style: solid;
@@ -75,30 +75,32 @@ input, textarea {
   border-color: $dark-earth;
   padding-left: 0.625rem;
   font-size: 1rem;
-}
-
-input {
   width: 16rem;
   height: 2.5rem;
   margin-top: 0.625rem;
   margin-bottom: 1.25rem;
 }
 
-textarea {
+.inpEmail, .inpName, .messageRequired {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+
+.textMessage {
   width: 30rem;
   height: 5rem;
   margin-top: 0.625rem;
   padding-top: 1rem;
   margin-bottom: 1.25rem;
+  border-color: $dark-earth;
+  font-size: 1rem;
 }
 
-label {
-  display: block;
-  margin-bottom: 0.5rem;
-}
+
 
 .btnContactCard {
-  height: 2.813rem;
+  height: 3rem;
   padding-left: 0.313rem;
   padding-right: 0.313rem;
   margin-bottom: 1.25rem;
@@ -108,7 +110,7 @@ label {
   border-color: $dark-earth;
   border-style: solid;
   border-radius: 0.625rem;
-  width: 26.25rem;
+  width: 15rem;
   cursor: pointer;
 }
 
@@ -123,6 +125,6 @@ button p {
 }
 
 .alert {
-  font-size: 0.813rem;
+  font-size: 1.5rem;
   color: $dark-grey;
 }

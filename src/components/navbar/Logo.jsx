@@ -4,7 +4,7 @@ import "./logo.scss"
 const Logo = () => {
   return (
     <div className='logoHome'>
-        <img className= 'logoAngeles'src="/assets/icons/Angeles-Foto.svg" alt="logo" />
+        <img className= 'logoAngeles'src="/assets/icons/AM_L_Oscuro.svg" alt="logo" />
     </div>
   )
 }

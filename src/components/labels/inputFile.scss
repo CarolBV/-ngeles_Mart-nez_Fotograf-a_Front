@@ -1,9 +1,61 @@
+@import '../../../styles.scss';
+
 .formAddImageContainer {
     display: flex;
     flex-direction: column;
+    @include cormorant-garamond-medium(1.5rem);
+    max-width: 43.75rem;
+    height: auto;
+    background-color: $soft;
+    margin: auto;
+    margin-top: 5rem;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+.titleFile {
+    font-size: 2rem;
+    color: $dark-grey;
+    margin: 1rem auto 2rem;
 }
 
-.inputFile {
+
+.inputFile{
+
+    width: 100%;
+    margin-bottom: 1rem;
+    @include lora(1rem)
+
+} 
+
+.inpAddFileName {
+    @include lora(1rem);
+    margin-right: 1rem;
+   
+}
+.btnInpFile {
+
     width: 10rem;
-    height: 10rem;
+    height: 3rem;
+    border: 0.1rem solid $dark-earth;
+    color: $dark-grey;
+    border-radius: 1rem;
+    margin-left: 2rem;
+    @include lora(1rem);
+    font-weight: bold;
+
+
+}
+.selecFile {
+
+
+}
+
+.successMessage {
+    color: rgb(8, 107, 8);
+    margin-top: 1rem;
+}
+
+.errorMessage {
+    color: red;
+    margin-top: 1rem;
 }

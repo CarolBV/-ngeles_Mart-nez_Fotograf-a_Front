@@ -38,6 +38,7 @@ const LoginAdmin = () => {
     <div className="loginContainer">
     <h2 className='titleLogin'>Iniciar sesión</h2>
     <form onSubmit={handleSubmit}>
+        <div className='loginContainer2'>
         <div className='labLogin'>
             <label className='labUser'>Usuario:</label>
             <input className='logInput'
@@ -47,7 +48,7 @@ const LoginAdmin = () => {
                 required
             />
         </div>
-        <div>
+        <div className='labPassword'>
             <label className='labPass'>Contraseña:</label>
             <input className='logInput2'
                 type="password"
@@ -56,6 +57,7 @@ const LoginAdmin = () => {
                 required
             />
            
+        </div>
         </div>
         <button className='btnLog' type="submit">Iniciar sesión</button>
      

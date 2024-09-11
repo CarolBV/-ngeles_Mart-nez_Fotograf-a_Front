@@ -1,6 +1,7 @@
 import axios from "axios";
 import DeleteModal from "../modals/DeleteModal";
 import { useState } from "react";
+import './buttons.scss';
 
 const DeleteButton = ({ imageId, onImageDeleted }) => {
   const [showModal, setShowModal] = useState(false);
