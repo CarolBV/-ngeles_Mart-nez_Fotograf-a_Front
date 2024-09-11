@@ -5,22 +5,23 @@ import { useAuth } from '../context/auth/authContext';
 import DeleteButton from './buttons/DeleteButton';
 import { useParams } from 'react-router-dom';
 import './imageGalleryByCategory.scss';
+import EditButton from './buttons/EditButton';
+
 
 
 const ImageGalleryByCategory = () => {
-  const { category } = useParams(); // Captura el parámetro dinámico de la URL
-  const { isAuthenticated } = useAuth(); // Para saber si el admin está logueado
+  const { category } = useParams();
+  const { isAuthenticated } = useAuth();
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [imageToEdit, setImageToEdit] = useState(null); // Imagen seleccionada para editar
-  const [imageToView, setImageToView] = useState(null); // Imagen seleccionada para ver en tamaño completo
+  const [imageToEdit, setImageToEdit] = useState(null);
+  const [imageToView, setImageToView] = useState(null);
 
   useEffect(() => {
     const fetchImagesByCategory = async () => {
       try {
         const response = await axios.get(`http://localhost:3001/gallery/category/${category}`);
-        console.log('Imágenes de la categoría:', response.data);
         setImages(response.data);
         setLoading(false);
       } catch (error) {
@@ -28,37 +29,36 @@ const ImageGalleryByCategory = () => {
         setLoading(false);
       }
     };
-
     fetchImagesByCategory();
   }, [category]);
 
   const handleImageDeleted = (imageId) => {
-    setImages(images.filter((image) => image.id !== imageId)); // Actualizar la lista de imágenes tras eliminar una
+    setImages(images.filter((image) => image.id !== imageId));
   };
 
   const handleImageClick = (image) => {
-    setImageToView(image); // Mostrar la imagen en tamaño completo
+    setImageToView(image);
   };
-
-  if (loading) return <p>Cargando imágenes...</p>;
-  if (error) return <p>{error}</p>;
 
   return (
     <div className="imageGallery">
       {images.map((image) => (
-        <div key={image.id} className="imageCard" onClick={() => handleImageClick(image)}>
-          {isAuthenticated && (
-            <DeleteButton
-              imageId={image.id}
-              onImageDeleted={handleImageDeleted}
-            />
-          )}
-          <img className="imgGallery" src={image.imageUrl} alt={image.name} />
-          <p className="imageTitle">{image.name}</p>
-        </div>
+       <div key={image.id} className="imageCard" onClick={() => handleImageClick(image)}>
+       {isAuthenticated && (
+         <DeleteButton imageId={image.id} onImageDeleted={handleImageDeleted} />
+       )}
+       
+       <img className="imgGallery" src={image.imageUrl} alt={image.name} />
+       
+       <div className="imageFooter">
+         <p className="imageTitle">{image.name}</p>
+         {isAuthenticated && (
+           <EditButton onClick={(e) => { e.stopPropagation(); setImageToEdit(image); }} />
+         )}
+       </div>
+     </div>
       ))}
 
-      {/* Modal para ver la imagen en tamaño completo */}
       {imageToView && (
         <div className="imageModal" onClick={() => setImageToView(null)}>
           <img className="fullImage" src={imageToView.imageUrl} alt={imageToView.name} />
