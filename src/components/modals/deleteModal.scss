@@ -1,7 +1,7 @@
 @import '../../../styles.scss';
 
 /* Fondo oscuro que cubre toda la pantalla */
-.modal-overlay {
+.modalOverlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -15,7 +15,7 @@
   }
   
   /* Contenido del modal */
-  .modal-content {
+  .modalContent {
     background-color: $white;
     padding: 2rem;
     border-radius: 1rem;
@@ -26,7 +26,7 @@
     @include lora (1rem)
   }
   
-  .modal-buttons {
+  .modalButtons {
     margin-top: 1.5rem;
     display: flex;
     justify-content: space-between;

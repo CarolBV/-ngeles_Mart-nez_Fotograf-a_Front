@@ -25,9 +25,8 @@ const DeleteButton = ({ imageId, onImageDeleted }) => {
     <>
       {/* Icono para eliminar */}
       <div className="deleteButton" onClick={(e) => { e.stopPropagation(); setShowModal(true); }}>
-        <img className="imgDeleteButton" src="/assets/icons/delete.svg" alt="Eliminar imagen" />
-      </div>
-
+  <img className="imgDeleteButton" src="/assets/icons/delete.svg" alt="Eliminar imagen" />
+</div>
       {/* Modal de confirmación */}
       {showModal && (
         <DeleteModal
