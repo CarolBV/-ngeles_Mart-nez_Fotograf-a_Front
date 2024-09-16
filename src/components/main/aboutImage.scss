@@ -1,0 +1,84 @@
+@import "../../../styles.scss";
+
+
+.aboutMeContainer {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    width: 100%;
+    height: auto;
+    padding: 2rem; 
+    @include cormorant-garamond-medium(1.5rem);
+    background-color: $soft-white;
+}
+
+.titleAbout {
+    text-align: center;
+    width: 100%; 
+    max-width: 60rem; 
+    margin-bottom: 4rem;
+    margin-top: 2rem;
+    @include cormorant-garamond-bold (3rem);
+    color: $dark-earth; 
+}
+
+.aboutMeInfo {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    width: 100%;
+    gap: 2rem; 
+    background-color: $soft;
+    border-radius: 1rem;
+    margin-bottom: 3rem;
+   
+   
+}
+.myGold {
+    text-align: center;
+    width: 100%; 
+    margin-bottom: 2rem;
+    @include cormorant-garamond-bold (2.5rem);
+    color: $white; 
+    background-color: $dark-earth;
+    border-radius: 0.5rem;
+    margin: 3rem auto 5rem;
+    max-width: 64rem;
+    padding: 1.5rem;
+}
+.aboutMeImageContainer {
+    display: flex;
+    justify-content: center;
+    width: 40%;
+}
+
+.meImage {
+    width: 30rem;
+    height: auto;
+    border-radius: 1rem;
+    border: 0.5rem solid $dark-earth2;
+}
+
+.textAbout{
+    font-size: 1.75rem;
+    text-align: left;
+    border-radius: 1rem;
+    margin: 2%;
+    padding: 2%;
+    width: 50%;
+    color: black;
+    line-height: 2.75rem;
+}
+
+.textAbout2 {
+    width: 90%; 
+    margin: 0 auto; 
+    line-height: 2.4; 
+    text-align: center; 
+    @include cormorant-garamond-medium(1.7rem);
+}
+
+.textAbout2 p {
+    line-height: 3rem;
+    margin-bottom: 2rem; 
+}

@@ -1,0 +1,179 @@
+@import "../../../../styles.scss";
+
+.contactContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  width: 100%;
+  padding: 2rem 1rem; 
+ @include cormorant-garamond-medium(1.8rem);
+ background-color: $soft-white;
+ 
+}
+.infoContactContainer {
+display: flex;
+flex-direction: column;
+width: 100%;
+align-items: center;
+margin-top: 3rem;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+  padding-bottom: 1.25rem;
+  margin-bottom: 2rem;
+  color: $dark-earth;
+}
+
+.infoContact {
+  text-align: center; 
+  margin-bottom: 2rem; 
+  max-width: 90%; 
+  line-height: 3rem;
+  color: $dark-grey;
+  @include lora(1.5rem)
+}
+
+.formContainer {
+  width: 40rem;
+  border-radius: 1rem;
+  padding: 1rem 1rem 1.25rem;
+  background-color: $soft;
+  position: relative; 
+  bottom: 0; 
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  align-items: center;
+  flex: 1 1 60%;
+  order: 1;
+}
+
+.formTitle {
+  font-size: 2.438rem;
+  text-align: center; 
+  padding-bottom: 1.25rem;
+  color: $dark-earth;
+  
+}
+
+.form1 {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.formRow {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.inpEmail, .inpName {
+  background-color: $white;
+  border-radius: 0.313rem;
+  border-style: solid;
+  border-width: 0.063rem;
+  border-color: $dark-earth;
+  padding-left: 0.625rem;
+  font-size: 1rem;
+  width: 100%;
+  height: 2.5rem;
+  margin-top: 0.625rem;
+  margin-bottom: 1.25rem;
+  padding: 1.5rem 1rem;
+}
+
+.inpEmail, .inpName, .messageRequired {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+
+.textMessage {
+  width: 30rem;
+  height: 5rem;
+  margin-top: 0.625rem;
+  padding: 1rem;
+  margin-bottom: 1.25rem;
+  border-color: $dark-earth;
+  font-size: 1rem;
+}
+
+
+
+.btnContactCard {
+  height: 3rem;
+  padding-left: 0.313rem;
+  padding-right: 0.313rem;
+  margin-bottom: 1.25rem;
+  margin-top: 0.625rem;
+  text-transform: uppercase;
+  background-color: $earth;
+  border-color: $dark-earth;
+  border-style: solid;
+  border-radius: 0.625rem;
+  width: 15rem;
+  cursor: pointer;
+}
+
+button p {
+  color: $white;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.required {
+  color: $dark-earth;
+}
+
+.alert {
+  font-size: 1.5rem;
+  color: $dark-grey;
+}
+.litleHealpersContainer {
+  display: flex;
+  flex: 1 1 30%;
+  order: 2;
+}
+.litleHealpers {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+.socialMediaContainer {
+  display: flex;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  
+}
+.socialMediaImage, .socialMediaImage2 {
+  width: 5rem;
+  height: 2rem;
+   
+  }
+   .socialFormMediaContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 64rem;
+    background-color: $soft;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin: 4rem auto 5rem;
+   }
+   .socialFormMediaContainerTitle {
+    order: 0;
+    flex: 1 0 100%;
+}
+   .socialMediaInfo {
+    background-color: $dark-earth;
+    color: $white;
+    font-size: 2rem;
+    border-radius: 1rem;
+    padding: 0.5rem 1.5rem;
+    margin: 3rem auto;
+   }

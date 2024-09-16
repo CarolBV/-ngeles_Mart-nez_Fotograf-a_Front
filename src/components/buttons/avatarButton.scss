@@ -1,0 +1,50 @@
+@import '../../../styles.scss';
+ /* Ajusta el tamaño del avatar para que se mantenga dentro del navbar */
+.avatarButton {
+  margin-left: auto;  /* Alinea el avatar a la derecha */
+  display: inline-block;
+  position: relative;  /* Para controlar el pop-up */
+  border: 0.2rem solid $dark-earth3;
+  @include lora(1rem);
+
+  .avatarImage {
+    width: 2.5rem;  /* Tamaño del avatar */
+    height: 2.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    &:hover {
+      transform: scale(1.1);  /* Efecto de zoom */
+    }
+  }
+
+  /* Pop-up de logout */
+  .logoutPopup {
+    position: absolute;
+    top: 7rem;
+    right: 0rem;
+    width: 20rem;
+    background-color: $soft-white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1001;  /* Asegúrate de que el popup esté por encima de todo */
+  }
+}
+
+.btnAvatar {
+  background-color: #f44336;
+  margin-top: 1rem;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1rem;
+
+  &:hover {
+    background-color: #d32f2f;  /* Efecto hover */
+  }
+}

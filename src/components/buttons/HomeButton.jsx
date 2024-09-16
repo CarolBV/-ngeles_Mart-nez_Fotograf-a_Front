@@ -1,8 +1,14 @@
 import React from 'react'
+import "./buttons.scss"
+import { Link } from 'react-router-dom'
 
 const HomeButton = () => {
   return (
-    <div>HomeButton</div>
+    <div className='homeContainer'>
+      <Link to="/">
+      <button className='btnHome'>Inicio</button>
+      </Link>
+    </div>
   )
 }
 
